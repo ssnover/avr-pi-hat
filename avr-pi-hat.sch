@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:avr-pi-hat-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -532,96 +533,6 @@ Connection ~ 2000 2400
 Text GLabel 3700 2400 2    50   Input ~ 0
 3V3
 Connection ~ 3200 2400
-$Comp
-L Transistor_BJT:2N2219 Q1
-U 1 1 5B14BB00
-P 5950 2650
-F 0 "Q1" H 6141 2696 50  0000 L CNN
-F 1 "2N2219" H 6141 2605 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-39-3" H 6150 2575 50  0001 L CIN
-F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 5950 2650 50  0001 L CNN
-	1    5950 2650
-	1    0    0    -1  
-$EndComp
-Text GLabel 5550 2650 0    50   Input ~ 0
-AVR_RST
-$Comp
-L Device:R R4
-U 1 1 5B14BC5A
-P 5650 2900
-F 0 "R4" H 5720 2946 50  0000 L CNN
-F 1 "100k" H 5720 2855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 5580 2900 50  0001 C CNN
-F 3 "~" H 5650 2900 50  0001 C CNN
-	1    5650 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR012
-U 1 1 5B14BC96
-P 5650 3100
-F 0 "#PWR012" H 5650 2850 50  0001 C CNN
-F 1 "GND" H 5655 2927 50  0000 C CNN
-F 2 "" H 5650 3100 50  0001 C CNN
-F 3 "" H 5650 3100 50  0001 C CNN
-	1    5650 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5B14D19B
-P 6050 2150
-F 0 "R5" H 6120 2196 50  0000 L CNN
-F 1 "10k" H 6120 2105 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 5980 2150 50  0001 C CNN
-F 3 "~" H 6050 2150 50  0001 C CNN
-	1    6050 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR014
-U 1 1 5B14D297
-P 6050 1900
-F 0 "#PWR014" H 6050 1750 50  0001 C CNN
-F 1 "+5V" H 6065 2073 50  0000 C CNN
-F 2 "" H 6050 1900 50  0001 C CNN
-F 3 "" H 6050 1900 50  0001 C CNN
-	1    6050 1900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR015
-U 1 1 5B14D32A
-P 6050 2950
-F 0 "#PWR015" H 6050 2700 50  0001 C CNN
-F 1 "GND" H 6055 2777 50  0000 C CNN
-F 2 "" H 6050 2950 50  0001 C CNN
-F 3 "" H 6050 2950 50  0001 C CNN
-	1    6050 2950
-	1    0    0    -1  
-$EndComp
-Text GLabel 6250 2400 2    50   Input ~ 0
-~RESET
-Wire Wire Line
-	6250 2400 6050 2400
-Wire Wire Line
-	6050 2400 6050 2450
-Wire Wire Line
-	6050 2400 6050 2300
-Connection ~ 6050 2400
-Wire Wire Line
-	6050 2000 6050 1900
-Wire Wire Line
-	5650 2750 5650 2650
-Wire Wire Line
-	5650 2650 5750 2650
-Wire Wire Line
-	5650 2650 5550 2650
-Connection ~ 5650 2650
-Wire Wire Line
-	6050 2850 6050 2950
-Wire Wire Line
-	5650 3050 5650 3100
 Text GLabel 3350 5700 2    50   Input ~ 0
 ~RESET
 Wire Wire Line
@@ -686,8 +597,6 @@ F 3 "~" H 8950 2250 50  0001 C CNN
 	1    8950 2250
 	1    0    0    -1  
 $EndComp
-Text GLabel 8150 1650 0    50   Input ~ 0
-AVR_RST
 Wire Wire Line
 	8150 3150 8750 3150
 Wire Wire Line
@@ -702,10 +611,6 @@ Text Notes 8350 2950 0    50   ~ 0
 GPIO 13
 Text Notes 8350 2850 0    50   ~ 0
 GPIO 6
-Text Notes 8350 1650 0    50   ~ 0
-GPIO 4
-Wire Wire Line
-	8150 1650 8750 1650
 NoConn ~ 8750 1450
 NoConn ~ 8750 1550
 NoConn ~ 8750 1750
@@ -737,7 +642,7 @@ NoConn ~ 9250 1950
 NoConn ~ 9250 1850
 Text GLabel 9900 1800 2    50   Input ~ 0
 UART_PI_TO_AVR
-Text GLabel 9900 1900 2    50   Input ~ 0
+Text GLabel 10550 1550 0    50   Input ~ 0
 UART_AVR_TO_PI
 Wire Wire Line
 	9900 1800 9650 1800
@@ -749,8 +654,6 @@ Wire Wire Line
 	9250 1750 9550 1750
 Wire Wire Line
 	9550 1750 9550 1900
-Wire Wire Line
-	9550 1900 9900 1900
 Wire Wire Line
 	9650 5900 9850 5900
 Wire Wire Line
@@ -790,8 +693,6 @@ Wire Wire Line
 	4850 1200 4700 1200
 Wire Wire Line
 	4150 1200 4400 1200
-Text Notes 4850 3600 0    197  ~ 0
-RESET CONTROL
 Text Notes 2750 1900 0    197  ~ 0
 POWER
 Text Notes 3450 6850 0    197  ~ 0
@@ -949,4 +850,66 @@ Wire Wire Line
 Wire Wire Line
 	3300 3150 3600 3150
 Connection ~ 3600 3150
+$Comp
+L Device:R R7
+U 1 1 5B146938
+P 10650 2250
+F 0 "R7" H 10720 2296 50  0000 L CNN
+F 1 "1k" H 10720 2205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 10580 2250 50  0001 C CNN
+F 3 "~" H 10650 2250 50  0001 C CNN
+	1    10650 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5B1469B0
+P 10650 2600
+F 0 "R8" H 10720 2646 50  0000 L CNN
+F 1 "1k" H 10720 2555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 10580 2600 50  0001 C CNN
+F 3 "~" H 10650 2600 50  0001 C CNN
+	1    10650 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5B1469FA
+P 10650 1850
+F 0 "R6" H 10720 1896 50  0000 L CNN
+F 1 "1k" H 10720 1805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 10580 1850 50  0001 C CNN
+F 3 "~" H 10650 1850 50  0001 C CNN
+	1    10650 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5B146AE2
+P 10650 2750
+F 0 "#PWR021" H 10650 2500 50  0001 C CNN
+F 1 "GND" H 10655 2577 50  0000 C CNN
+F 2 "" H 10650 2750 50  0001 C CNN
+F 3 "" H 10650 2750 50  0001 C CNN
+	1    10650 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10650 2400 10650 2450
+Wire Wire Line
+	10650 2000 10650 2050
+Wire Wire Line
+	10550 1550 10650 1550
+Wire Wire Line
+	10650 1550 10650 1700
+Wire Wire Line
+	10500 1900 10500 2050
+Wire Wire Line
+	10500 2050 10650 2050
+Wire Wire Line
+	9550 1900 10500 1900
+Connection ~ 10650 2050
+Wire Wire Line
+	10650 2050 10650 2100
+NoConn ~ 8750 1650
 $EndSCHEMATC
