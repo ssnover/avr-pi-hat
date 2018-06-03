@@ -1,0 +1,2 @@
+# AVR Pi Hat
+This is a small hardware project to build a daughterboard for the Raspberry Pi 3 which will house an Atmega328P microcontroller as a coprocessor, allowing UART communication between the boards and allowing the Raspberry Pi to flash new firmware to the AVR. Additionally the board will have the R3 headers common to Arduino and extend the Pi's headers to be available for prototyping.
